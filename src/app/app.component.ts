@@ -8,7 +8,8 @@ import { TournamentsPage } from '../pages/tournaments/tournaments';
 import { TeamDetailPage } from '../pages/team-detail/team-detail';
 import { GamePage } from '../pages/game/game';
 import { TeamsPage } from '../pages/teams/teams';
-
+import { TeamHomePage } from '../pages/team-home/team-home';
+import { StandingsPage } from '../pages/standings/standings';
 
 
 @Component({
@@ -30,7 +31,9 @@ export class MyApp {
       { title: 'Tournaments', component: TournamentsPage },
       { title: 'TeamDetail', component: TeamDetailPage },
       { title: 'Game', component: GamePage },
-      { title: 'Teams', component: TeamsPage }
+      { title: 'Teams', component: TeamsPage },
+      { title: 'TeamHome', component: TeamHomePage },
+      { title: 'Standings', component: StandingsPage }
     ];
 
   }
