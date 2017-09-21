@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 import { myTeamsPage } from '../pages/my-teams/my-teams.page';
 import { TournamentsPage } from '../pages/tournaments/tournaments';
@@ -10,10 +11,15 @@ import { GamePage } from '../pages/game/game';
 import { TeamsPage } from '../pages/teams/teams';
 import { TeamHomePage } from '../pages/team-home/team-home';
 import { StandingsPage } from '../pages/standings/standings';
+import { EliteApi } from '../shared/shared';
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [
+    EliteApi,
+    HttpModule
+  ]
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
